@@ -23,16 +23,22 @@ public class Main {
         /* Console Input / Output */
         System.out.println("Input the first number:");
         Scanner sc = new Scanner(System.in);
-        int x = sc.nextInt(); // вызов метода
-        System.out.println("Input the second number:");
-        int y = sc.nextInt();
-        System.out.println("x + y = " + (x + y));
-
+        try {
+            int x = sc.nextInt(); // вызов метода
+            System.out.println("Input the second number:");
+            int y = sc.nextInt();
+            System.out.println("x + y = " + (x + y));
+        } catch (Exception ex) {
+            System.out.println("Wrong input: x and y must be integer. Finish...");
+            System.exit(-1);
+        }
         // Task
         // Дописать код программы так, чтобы:
         // - после вывода суммы выводились также разность,
         //, произведение и результат деления х и у.
 
         // System.out.println(10 / 0);
+        System.out.println("Demo: 10 / 2 =");
+        System.out.println(10 / 2);
     }
 }
