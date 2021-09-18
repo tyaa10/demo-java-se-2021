@@ -66,7 +66,7 @@ public class Main {
         }
         System.out.println("Вы ввели данные:");
         for (int i = 0; i < count; i++) {
-            System.out.printf("%s\n", integers[i]);
+            System.out.printf("%s (%s)\n", integers[i], (integers[i] % 2 == 0) ? "четное" : "нечетное");
         }
     }
 }
