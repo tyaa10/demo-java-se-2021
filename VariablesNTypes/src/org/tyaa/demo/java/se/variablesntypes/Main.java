@@ -21,24 +21,30 @@ public class Main {
         boo1 = false; */
 
         /* Console Input / Output */
-        System.out.println("Input the first number:");
+
         Scanner sc = new Scanner(System.in);
-        try {
-            int x = sc.nextInt(); // вызов метода
-            System.out.println("Input the second number:");
-            int y = sc.nextInt();
-            System.out.println("x + y = " + (x + y));
-        } catch (Exception ex) {
-            System.out.println("Wrong input: x and y must be integer. Finish...");
-            System.exit(-1);
-        }
+        int x; // вызов метода
+        String inputString = "";
+        do {
+            System.out.println("Input the first integer number:");
+            inputString = sc.nextLine();
+        } while (!inputString.matches("[0-9]{1,}"));
+        x = Integer.parseInt(inputString);
+        int y;
+        do {
+            System.out.println("Input the second integer number:");
+            inputString = sc.nextLine();
+        } while (!inputString.matches("[0-9]{1,}"));
+        y = Integer.parseInt(inputString);
+        System.out.println("x + y = " + (x + y));
+
         // Task
         // Дописать код программы так, чтобы:
         // - после вывода суммы выводились также разность,
         //, произведение и результат деления х и у.
 
         // System.out.println(10 / 0);
-        System.out.println("Demo: 10 / 2 =");
-        System.out.println(10 / 2);
+        // System.out.println("Demo: 10 / 2 =");
+        // System.out.println(10 / 2);
     }
 }
