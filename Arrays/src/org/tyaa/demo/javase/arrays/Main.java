@@ -44,11 +44,11 @@ public class Main {
         String result = builder.toString();
         System.out.println(result.substring(0, result.length() - 2)); */
 
-        final int[] integers = new int[7];
+        /*final int[] integers = new int[7];
         // integers = null;
         for (int i = 0; i < integers.length; i++) {
             System.out.println(integers[i]);
-        }
+        }*/
 
         // TODO добавить цикл, принимающий у пользователя числа из консоли,
         // и собирающий их в массив длиной, указанной самим пользователем выше.
@@ -56,5 +56,17 @@ public class Main {
         // причем после каждого значения в круглых скобках в той же строке консоли
         // нужно вывести слово "четное" или "нечетное", для этого используйте
         // форматирование строк, деление по модулю на 2 (%) и условное ветвление.
+   Scanner sc = new Scanner(System.in);
+        System.out.println("Ведите размер массива - целое число и нажмите ввод");
+   int count = sc.nextInt();
+        final int[] integers = new int[count];
+        for (int i = 0; i < count; i++) {
+            System.out.printf("Ведите значение номер %s - целое число и нажмите ввод", i + 1);
+          integers[i] = sc.nextInt();
+        }
+        System.out.println("Вы ввели данные:");
+        for (int i = 0; i < count; i++) {
+            System.out.printf("%s (%s)\n", integers[i], (integers[i] % 2 == 0) ? "четное" : "нечетное");
+        }
     }
 }
